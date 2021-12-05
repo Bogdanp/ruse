@@ -4,7 +4,8 @@
 
 (require (for-syntax racket/base
                      syntax/parse)
-         racket/match)
+         racket/match
+         racket/port)
 
 ;; env ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -238,10 +239,10 @@
      [load (λ (filename) (load filename base-env))]
      [eval (λ (expr) (eval* expr (current-env)))]
      [argv (cdr (vector->list (current-command-line-arguments)))]
-     eq? eqv? equal? number? char? string? symbol? pair? list? null? void? eof-object?
+     eq? eqv? equal? boolean? number? char? string? symbol? pair? list? null? void? eof-object?
      apply exit error void eof cons car cdr list string string->symbol
      format display displayln print println write writeln newline
-     call-with-input-file read-char peek-char
+     call-with-input-file read-char peek-char port->string
      = + - * / < > <= >=))
   base-env)
 

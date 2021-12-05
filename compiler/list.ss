@@ -2,6 +2,12 @@
 
 (define (caar lst) (car (car lst)))
 (define (cadr lst) (car (cdr lst)))
+(define (cddr lst) (cdr (cdr lst)))
+(define (cdar lst) (cdr (car lst)))
+(define (caddr lst) (car (cddr lst)))
+(define (cdddr lst) (cdr (cddr lst)))
+(define (cadddr lst) (car (cdddr lst)))
+(define (cddddr lst) (cdr (cdddr lst)))
 
 (define (length lst)
   (let loop ((len 0)

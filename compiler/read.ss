@@ -1,3 +1,4 @@
+(load "bool.ss")
 (load "list.ss")
 
 (define read
