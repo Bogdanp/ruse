@@ -1,0 +1,7 @@
+(println '1)
+(println 'a)
+(println '(+ 1 2))
+(println `(+ 1 ,(+ 2 3) ,1))
+(define xs '(2 3))
+(println `(1 ,@xs ((,@xs))))
+(println `(,@'(1 2 3)))
